@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="logo.svg" alt="Elevation of Skills Logo" width="150" />
+</div>
+
+# Organizational & Operational Agent Skills
+
 This is a set of skills and workflows to guide AI agents to build projects that better align with you or your organization's goals. It is based off my "Zen of the Staff Engineer" document published on [LinkedIn](https://www.linkedin.com/pulse/zen-staff-engineer-ryan-beales-7hsrc/).
 
 The published article was intended to be a set of guiding principles for making decisions about what and how to build software. The goal is to keep operational and organizational context in mind when making decisions. Here I'm providing a set of skills and workflows to help AI agents follow the same principles.
@@ -5,7 +11,7 @@ The published article was intended to be a set of guiding principles for making 
 The TL;DR of the article is:
 - Does it align with your core business?: Consider the organization's value stream: does adding this project increase any metrics associated with the core business? (e.g., revenue, cost savings, user retention, etc.)
 - Buy vs. build: Prefer pre-built solutions over building your own. Even if an AI can generate it in seconds, it means the AI still has to maintain that code in perpetuity. Do you want to use your token budget for duplicating existing software? (Let _them_ use their token budget!)
-- Every line of code needs maintenance: A line of code still requires periodic review and maintenance; it doesn't matter if a human or AI is writing it. Tokens are expensive and we want to use them efficiently. `docker run` is _far_ simpler than duplicating Heroku.
+- Every line of code needs maintenance: A line of code still requires periodic review and maintenance; it doesn't matter if a human or AI is writing it. Tokens are expensive and we want to use them efficiently. `docker run redis` is _far_ simpler than duplicating Redis functionality.
 
 There are caveats to these points in the article, but for AI agents we don't need to worry so much. You might still need to have that context, but the intent of these skills and workflows is to corral the AI into making decisions that align with you and your organization's goals.
 
@@ -16,7 +22,7 @@ AI makes it exceptionally easy to build software now. But _should you?_ You prob
 This is currently set up for Google Antigravity or Gemini-cli. The workflows and skills will work as-is in other tools but they just need to live in different directories.
 
 Here are examples of where skills and workflows typically live in popular AI tools (at the project level):
-- **Google Antigravity / Gemini-cli**: `.agent/skills/` and `.agent/workflows/` (or `_agents/`)
+- **Google Antigravity / Gemini-cli**: `.agent/skills/` and `.agent/workflows/`
 - **Claude Code**: `.claude/skills/` for skills and `CLAUDE.md` in the project root for general rules
 - **Cursor**: `.cursor/rules/` directory or a `.cursorrules` file in the project root
 - **GitHub Copilot**: `.github/copilot-instructions.md`
